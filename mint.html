@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mint Your NFT</title>
+  <!-- Add Google Fonts for Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-left">
+      <span class="nav-title">Status-Apes NFT</span>
+    </div>
+    <div class="nav-center">
+      <a href="index.html#whitepaper">About</a>
+      <a href="index.html#status-update">Status Update</a>
+      <a href="mint.html">Mint Page</a>
+    </div>
+    <div class="nav-right"></div>
+  </nav>
+
+  <!-- Mint Section -->
+  <section class="hero-section">
+    <h2>Mint Your NFT</h2>
+    <p id="minted-count">Minted: 0 / 2222</p>
+    <p id="mint-price">Mint Price: 0.5 $Ape</p>
+    <button id="connect-wallet-mint">Connect Wallet</button>
+    <div id="mint-area"></div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.5/web3.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

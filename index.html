@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status-Apes NFT</title>
+  <!-- Add Google Fonts for Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-left">
+      <span class="nav-title">Status-Apes NFT</span>
+    </div>
+    <div class="nav-center">
+      <a href="#whitepaper">About</a>
+      <a href="#status-update">Status Update</a>
+      <a href="mint.html">Mint Page</a>
+    </div>
+    <div class="nav-right"></div>
+  </nav>
+
+  <!-- Whitepaper Section -->
+  <section id="whitepaper" class="hero-section">
+    <h2>What’s Status-Apes NFT?</h2>
+    <ul>
+      <li>A unique experimental NFT collection with customizable status text.</li>
+      <li>Each NFT lets you update a 128-character message.</li>
+      <li>Text color changes randomly on every update.</li>
+      <li>All metadata is stored on-chain for real-time updates.</li>
+    </ul>
+  </section>
+
+  <!-- Status Update Section -->
+  <section id="status-update">
+    <h2>Update Your NFT Status</h2>
+    <button id="connect-wallet">Connect Wallet</button>
+    <div id="update-form" style="display: none;">
+      <input type="number" id="token-id" placeholder="Token ID" min="1">
+      <textarea id="status-text" rows="4" maxlength="128" placeholder="Enter your status (max 128 characters)"></textarea>
+      <p>Characters: <span id="char-count">0</span>/128 (must be 1-128 characters)</p>
+      <button id="submit-btn" disabled>Submit</button>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.5/web3.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

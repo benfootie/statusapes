@@ -1,0 +1,209 @@
+/* Define CSS Variables for Consistent Colors */
+:root {
+    --primary-color: #1abc9c;    /* Bright teal for hero section and buttons */
+    --secondary-color: #2c3e50;  /* Dark teal for nav */
+    --text-color: #ffffff;       /* White for text */
+    --background-color: #333333; /* Dark gray for body */
+    --button-hover: #16a085;     /* Darker teal for button hover */
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-left, .nav-center, .nav-right {
+    flex: 1;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-title {
+    color: var(--text-color);
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav-center a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-center a:hover {
+    color: var(--primary-color);
+}
+
+/* Sections */
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-section {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Headings */
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+/* Buttons */
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+.hero-section button {
+    background-color: var(--secondary-color);
+}
+
+.hero-section button:hover {
+    background-color: #233544; /* Slightly lighter than secondary-color */
+}
+
+/* Specific style for connect wallet button on mint page */
+#connect-wallet-mint {
+    width: 150px; /* Fixed width to make it smaller */
+    padding: 15px 10px; /* Reduced horizontal padding */
+    margin: 0 auto 20px auto; /* Center the button and add 20px bottom margin */
+}
+
+/* Minted count style */
+#minted-count {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Mint price style */
+#mint-price {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Form Elements */
+input, textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    background-color: #444;
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+textarea {
+    resize: none;
+}
+
+p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+#char-count {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    .nav-left {
+        margin-bottom: 10px;
+    }
+    .nav-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .nav-right {
+        display: none;
+    }
+    .nav-center a {
+        font-size: 0.9em;
+    }
+    section {
+        padding: 50px 10px;
+    }
+    .hero-section {
+        min-height: 80vh;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    input, textarea {
+        width: 90%;
+    }
+    #connect-wallet-mint {
+        width: 120px; /* Slightly smaller on mobile */
+        padding: 12px 8px; /* Adjust padding for smaller screens */
+        margin: 0 auto 15px auto; /* Center with 15px bottom margin on mobile */
+    }
+}
